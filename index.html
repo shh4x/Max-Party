@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Max Party</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+  <div id="notification"></div>
+  <header>
+    <img src="assets/logo.png" alt="Max Party Logo" id="logo">
+    <h1>Max Party</h1>
+    <button id="settings-btn">⚙️</button>
+  </header>
+  
+  <main>
+    <aside id="clanes-panel">
+      <h2>Clanes</h2>
+      <ul id="clanes-list">
+        <!-- Lista de clanes/comunidades -->
+      </ul>
+      <button id="add-clan-btn">➕ Nuevo Clan</button>
+    </aside>
+    <section id="central-panel">
+      <div id="tabs">
+        <button class="tab-btn active" data-tab="chat">💬 Chat</button>
+        <button class="tab-btn" data-tab="users">🧑‍🤝‍🧑 Usuarios</button>
+        <button class="tab-btn" data-tab="perfil">👤 Perfil</button>
+        <button class="tab-btn" data-tab="niveles">🌟 Niveles</button>
+      </div>
+      <div id="chat" class="tab-content active">
+        <ul id="chat-messages"></ul>
+        <div id="chat-controls">
+          <input type="text" id="chat-input" placeholder="Escribe un mensaje... 😊" maxlength="200">
+          <button id="send-btn">Enviar</button>
+          <button id="emoji-btn">😃</button>
+        </div>
+        <div id="emoji-picker" style="display: none;">
+          <span>😃</span> <span>😢</span> <span>👍</span>
+        </div>
+      </div>
+      <div id="users" class="tab-content">
+        <h3>Usuarios conectados</h3>
+        <ul id="users-list"></ul>
+      </div>
+      <div id="perfil" class="tab-content">
+        <h3>Tu Perfil</h3>
+        <div id="perfil-data">
+          <img src="assets/logo.png" alt="Avatar" id="perfil-avatar">
+          <input type="text" id="perfil-nombre" placeholder="Tu nombre">
+          <p>Nivel: <span id="perfil-nivel">1</span></p>
+          <p>Puntos: <span id="perfil-puntos">0</span></p>
+        </div>
+      </div>
+      <div id="niveles" class="tab-content">
+        <h3>Sistema de Niveles</h3>
+        <ul id="niveles-list">
+          <li>Nivel 1: 0 XP</li>
+          <li>Nivel 2: 100 XP</li>
+          <li>Nivel 3: 250 XP</li>
+          <li>Nivel 4: 500 XP</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  
+  <div id="config-panel" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-config">&times;</span>
+      <h2>Configuración</h2>
+      <label for="tema-select">Tema de color:</label>
+      <select id="tema-select">
+        <option value="oscuro">Oscuro 🖤</option>
+        <option value="claro">Claro 🤍</option>
+        <option value="rojo">Rojo ❤️</option>
+        <option value="verde">Verde 💚</option>
+        <option value="amarillo">Amarillo 💛</option>
+        <option value="azul">Azul 💙</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
